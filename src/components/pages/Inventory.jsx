@@ -67,9 +67,9 @@ filtered = filtered.filter(item => item.quantity <= item.min_stock);
       return;
     }
 
-    const filtered = inventory.filter(item =>
 const filtered = inventory.filter(item =>
       item.Name.toLowerCase().includes(query.toLowerCase()) ||
+      item.category.toLowerCase().includes(query.toLowerCase())
     );
     setFilteredInventory(filtered);
   };
@@ -194,7 +194,7 @@ const filtered = inventory.filter(item =>
             <div>
               <p className="text-sm text-surface-600">Low Stock</p>
               <p className="text-xl font-bold text-surface-900">
-                {inventory.filter(item => item.quantity <= item.minStock && item.quantity > 0).length}
+{inventory.filter(item => item.quantity <= item.min_stock && item.quantity > 0).length}
               </p>
             </div>
           </div>
@@ -321,7 +321,7 @@ const filtered = inventory.filter(item =>
                           </div>
                           <div className="min-w-0">
                             <div className="text-sm font-medium text-surface-900 truncate">
-                              {item.name}
+{item.Name}
                             </div>
                           </div>
                         </div>
@@ -335,7 +335,7 @@ const filtered = inventory.filter(item =>
                         {item.quantity}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-surface-500">
-                        {item.minStock}
+{item.min_stock}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap">
                         <Badge variant={stockStatus.variant} size="sm">
