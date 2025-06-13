@@ -43,14 +43,14 @@ const Appointments = () => {
         staffService.getAll()
       ]);
 
-      const enrichedAppointments = appointmentsData
-.filter(apt => apt.branch_id === selectedBranch.id)
+const enrichedAppointments = appointmentsData
+        .filter(apt => apt.branch_id.toString() === selectedBranch.id.toString())
         .map(apt => {
-const patient = patientsData.find(p => p.id === apt.patient_id);
-          const doctor = staffData.find(s => s.id === apt.doctor_id);
+          const patient = patientsData.find(p => p.Id.toString() === apt.patient_id.toString());
+          const doctor = staffData.find(s => s.Id.toString() === apt.doctor_id.toString());
           return {
             ...apt,
-patientName: patient?.Name || 'Unknown Patient',
+            patientName: patient?.Name || 'Unknown Patient',
             patientPhone: patient?.phone || '',
             doctorName: doctor?.Name || 'Unknown Doctor'
           };

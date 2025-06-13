@@ -45,8 +45,8 @@ const Patients = () => {
       return;
     }
 
-    const filtered = patients.filter(patient =>
-patient.Name.toLowerCase().includes(query.toLowerCase()) ||
+const filtered = patients.filter(patient =>
+      patient.Name.toLowerCase().includes(query.toLowerCase()) ||
       patient.email.toLowerCase().includes(query.toLowerCase()) ||
       patient.phone.includes(query)
     );
@@ -144,9 +144,9 @@ return appointments.filter(apt => apt.patient_id === patientId).length;
         </Card>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredPatients.map((patient, index) => {
-            const appointmentCount = getPatientAppointmentCount(patient.id);
-            const lastAppointment = getLastAppointment(patient.id);
+{filteredPatients.map((patient, index) => {
+            const appointmentCount = getPatientAppointmentCount(patient.Id);
+            const lastAppointment = getLastAppointment(patient.Id);
             
             return (
               <motion.div
@@ -157,13 +157,13 @@ return appointments.filter(apt => apt.patient_id === patientId).length;
               >
                 <Card className="p-6 hover:shadow-md transition-shadow cursor-pointer">
                   <div className="flex items-center space-x-4 mb-4">
-                    <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
+<div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center flex-shrink-0">
                       <span className="text-lg font-bold text-primary">
-                        {patient.name.charAt(0)}
+                        {patient.Name.charAt(0)}
                       </span>
                     </div>
                     <div className="min-w-0 flex-1">
-                      <h3 className="font-medium text-surface-900 truncate">{patient.name}</h3>
+                      <h3 className="font-medium text-surface-900 truncate">{patient.Name}</h3>
                       <p className="text-sm text-surface-500 truncate">{patient.email}</p>
                     </div>
                   </div>
