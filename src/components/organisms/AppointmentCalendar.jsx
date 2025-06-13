@@ -15,23 +15,23 @@ const AppointmentCalendar = ({ onDateSelect }) => {
   const { selectedBranch } = useBranch();
 
   useEffect(() => {
-    const loadAppointments = async () => {
-      if (!selectedBranch) return;
-      
-      setLoading(true);
-      try {
-        const data = await appointmentService.getAll();
-        const branchAppointments = data.filter(apt => apt.branchId === selectedBranch.id);
-        setAppointments(branchAppointments);
-      } catch (error) {
-        console.error('Failed to load appointments:', error);
-      } finally {
-        setLoading(false);
-      }
-    };
+const loadAppointments = async () => {
+    if (!selectedBranch) return;
+    
+    setLoading(true);
+    try {
+      const data = await appointmentService.getAll();
+      const branchAppointments = data.filter(apt => apt.branch_id.toString() === selectedBranch.id.toString());
+      setAppointments(branchAppointments);
+    } catch (error) {
+      console.error('Failed to load appointments:', error);
+    } finally {
+      setLoading(false);
+    }
+  };
 
-    loadAppointments();
-  }, [selectedBranch]);
+  loadAppointments();
+}, [selectedBranch]);
 
   const monthStart = startOfMonth(currentDate);
   const monthEnd = endOfMonth(currentDate);
