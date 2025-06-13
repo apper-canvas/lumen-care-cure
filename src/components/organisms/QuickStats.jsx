@@ -28,9 +28,9 @@ const QuickStats = () => {
           staffService.getAll()
         ]);
 
-        const today = new Date().toDateString();
+const today = new Date().toDateString();
         const branchAppointments = appointments.filter(apt => 
-          apt.branchId === selectedBranch.id
+          apt.branch_id === selectedBranch.id
         );
         const todayAppointments = branchAppointments.filter(apt => 
           new Date(apt.date).toDateString() === today
@@ -39,8 +39,7 @@ const QuickStats = () => {
           apt.status === 'completed'
         ).length;
 
-        const branchStaff = staff.filter(s => s.branchId === selectedBranch.id);
-
+        const branchStaff = staff.filter(s => s.branch_id === selectedBranch.id);
         setStats({
           todayAppointments: todayAppointments.length,
           totalPatients: patients.length,

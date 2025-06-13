@@ -27,11 +27,11 @@ const TodaySchedule = () => {
           staffService.getAll()
         ]);
 
-        const today = new Date().toDateString();
+const today = new Date().toDateString();
         const todayAppointments = appointmentsData
           .filter(apt => 
             new Date(apt.date).toDateString() === today && 
-            apt.branchId === selectedBranch.id
+            apt.branch_id === selectedBranch.id
           )
           .map(apt => {
             const patient = patientsData.find(p => p.id === apt.patientId);

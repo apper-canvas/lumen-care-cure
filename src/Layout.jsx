@@ -86,10 +86,8 @@ const Layout = () => {
                 <ApperIcon name="User" className="w-4 h-4 text-surface-600" />
               </div>
               <div className="flex-1 min-w-0">
-<div className="flex-1 min-w-0">
-                <p className="text-sm font-medium text-surface-900 truncate">Dr. Admin</p>
+<p className="text-sm font-medium text-surface-900 truncate">Dr. Admin</p>
                 <p className="text-xs text-surface-500 truncate">{selectedBranch?.Name}</p>
-              </div>
               </div>
             </div>
           </div>

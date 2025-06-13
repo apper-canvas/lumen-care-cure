@@ -33,8 +33,8 @@ const Dashboard = () => {
         <h1 className="text-2xl font-display font-bold mb-2">
           Welcome back, Dr. Admin! 👋
         </h1>
-        <p className="text-primary-100">
-          Here's what's happening at {selectedBranch.name} today
+<p className="text-primary-100">
+          Here's what's happening at {selectedBranch.Name} today
         </p>
       </motion.div>
 
