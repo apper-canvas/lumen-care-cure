@@ -44,15 +44,15 @@ const Appointments = () => {
       ]);
 
       const enrichedAppointments = appointmentsData
-        .filter(apt => apt.branchId === selectedBranch.id)
+.filter(apt => apt.branch_id === selectedBranch.id)
         .map(apt => {
-          const patient = patientsData.find(p => p.id === apt.patientId);
-          const doctor = staffData.find(s => s.id === apt.doctorId);
+const patient = patientsData.find(p => p.id === apt.patient_id);
+          const doctor = staffData.find(s => s.id === apt.doctor_id);
           return {
             ...apt,
-            patientName: patient?.name || 'Unknown Patient',
+patientName: patient?.Name || 'Unknown Patient',
             patientPhone: patient?.phone || '',
-            doctorName: doctor?.name || 'Unknown Doctor'
+            doctorName: doctor?.Name || 'Unknown Doctor'
           };
         })
         .sort((a, b) => new Date(b.date) - new Date(a.date));
@@ -82,7 +82,7 @@ const Appointments = () => {
       return;
     }
 
-    const filtered = appointments.filter(apt =>
+const filtered = appointments.filter(apt =>
       apt.patientName.toLowerCase().includes(query.toLowerCase()) ||
       apt.doctorName.toLowerCase().includes(query.toLowerCase()) ||
       apt.service.toLowerCase().includes(query.toLowerCase())

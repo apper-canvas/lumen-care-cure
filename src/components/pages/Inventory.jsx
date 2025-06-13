@@ -33,7 +33,7 @@ const Inventory = () => {
     setError(null);
     try {
       const data = await inventoryService.getAll();
-      const branchInventory = data.filter(item => item.branchId === selectedBranch.id);
+const branchInventory = data.filter(item => item.branch_id === selectedBranch.id);
       setInventory(branchInventory);
     } catch (err) {
       setError(err.message || 'Failed to load inventory');
@@ -48,12 +48,12 @@ const Inventory = () => {
 
     if (categoryFilter !== 'all') {
       filtered = filtered.filter(item => 
-        item.category.toLowerCase() === categoryFilter
+item.category.toLowerCase() === categoryFilter
       );
     }
 
     if (stockFilter === 'low') {
-      filtered = filtered.filter(item => item.quantity <= item.minStock);
+filtered = filtered.filter(item => item.quantity <= item.min_stock);
     } else if (stockFilter === 'out') {
       filtered = filtered.filter(item => item.quantity === 0);
     }
@@ -68,8 +68,8 @@ const Inventory = () => {
     }
 
     const filtered = inventory.filter(item =>
-      item.name.toLowerCase().includes(query.toLowerCase()) ||
-      item.category.toLowerCase().includes(query.toLowerCase())
+const filtered = inventory.filter(item =>
+      item.Name.toLowerCase().includes(query.toLowerCase()) ||
     );
     setFilteredInventory(filtered);
   };

@@ -38,7 +38,7 @@ const Staff = () => {
         appointmentService.getAll()
       ]);
       
-      const branchStaff = staffData.filter(s => s.branchId === selectedBranch.id);
+const branchStaff = staffData.filter(s => s.branch_id === selectedBranch.id);
       setStaff(branchStaff);
       setAppointments(appointmentsData);
     } catch (err) {
@@ -53,7 +53,7 @@ const Staff = () => {
     let filtered = staff;
 
     if (roleFilter !== 'all') {
-      filtered = filtered.filter(s => s.role.toLowerCase() === roleFilter);
+filtered = filtered.filter(s => s.role.toLowerCase() === roleFilter);
     }
 
     setFilteredStaff(filtered);
@@ -65,8 +65,8 @@ const Staff = () => {
       return;
     }
 
-    const filtered = staff.filter(member =>
-      member.name.toLowerCase().includes(query.toLowerCase()) ||
+const filtered = staff.filter(member =>
+      member.Name.toLowerCase().includes(query.toLowerCase()) ||
       member.role.toLowerCase().includes(query.toLowerCase()) ||
       member.specialization?.toLowerCase().includes(query.toLowerCase()) ||
       member.email.toLowerCase().includes(query.toLowerCase())
@@ -76,8 +76,8 @@ const Staff = () => {
 
   const getTodayAppointments = (staffId) => {
     const today = new Date().toDateString();
-    return appointments.filter(apt => 
-      apt.doctorId === staffId && 
+return appointments.filter(apt => 
+      apt.doctor_id === staffId && 
       new Date(apt.date).toDateString() === today
     );
   };
@@ -86,8 +86,8 @@ const Staff = () => {
     const tomorrow = new Date();
     tomorrow.setDate(tomorrow.getDate() + 1);
     
-    return appointments.filter(apt => 
-      apt.doctorId === staffId && 
+return appointments.filter(apt => 
+      apt.doctor_id === staffId && 
       new Date(apt.date) >= tomorrow
     ).length;
   };

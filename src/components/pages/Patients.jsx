@@ -46,7 +46,7 @@ const Patients = () => {
     }
 
     const filtered = patients.filter(patient =>
-      patient.name.toLowerCase().includes(query.toLowerCase()) ||
+patient.Name.toLowerCase().includes(query.toLowerCase()) ||
       patient.email.toLowerCase().includes(query.toLowerCase()) ||
       patient.phone.includes(query)
     );
@@ -54,7 +54,7 @@ const Patients = () => {
   };
 
   const getPatientAppointmentCount = (patientId) => {
-    return appointments.filter(apt => apt.patientId === patientId).length;
+return appointments.filter(apt => apt.patient_id === patientId).length;
   };
 
   const getLastAppointment = (patientId) => {
