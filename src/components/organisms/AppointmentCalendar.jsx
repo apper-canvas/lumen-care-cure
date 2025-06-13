@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { format, startOfMonth, endOfMonth, eachDayOfInterval, isSameMonth, isSameDay, isToday } from 'date-fns';
+import { format, startOfMonth, endOfMonth, eachDayOfInterval, isSameMonth, isSameDay, isToday, startOfWeek } from 'date-fns';
 import ApperIcon from '@/components/ApperIcon';
 import Card from '@/components/atoms/Card';
 import Badge from '@/components/atoms/Badge';
@@ -33,9 +33,16 @@ const loadAppointments = async () => {
   loadAppointments();
 }, [selectedBranch]);
 
-  const monthStart = startOfMonth(currentDate);
+const monthStart = startOfMonth(currentDate);
   const monthEnd = endOfMonth(currentDate);
-  const days = eachDayOfInterval({ start: monthStart, end: monthEnd });
+  
+  // Get the first Sunday of the week containing the first day of the month
+  const calendarStart = startOfWeek(monthStart);
+  // Generate 42 days (6 weeks) to ensure proper calendar grid
+  const days = eachDayOfInterval({ 
+    start: calendarStart, 
+    end: new Date(calendarStart.getTime() + 41 * 24 * 60 * 60 * 1000)
+  });
 
   const getAppointmentsForDate = (date) => {
     return appointments.filter(apt => 
