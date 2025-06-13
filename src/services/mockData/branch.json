@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1",
+    "name": "Downtown Clinic",
+    "address": "123 Main Street, Downtown, NY 10001",
+    "phone": "(555) 123-4567",
+    "email": "downtown@carecuredental.com"
+  },
+  {
+    "id": "2",
+    "name": "Uptown Branch",
+    "address": "456 Oak Avenue, Uptown, NY 10002",
+    "phone": "(555) 234-5678",
+    "email": "uptown@carecuredental.com"
+  },
+  {
+    "id": "3",
+    "name": "Westside Center",
+    "address": "789 Pine Road, Westside, NY 10003",
+    "phone": "(555) 345-6789",
+    "email": "westside@carecuredental.com"
+  }
+]

@@ -1,0 +1,90 @@
+[
+  {
+    "id": "1",
+    "patientId": "1",
+    "doctorId": "1",
+    "branchId": "1",
+    "date": "2024-01-15",
+    "time": "09:00",
+    "duration": 60,
+    "service": "Regular Checkup",
+    "status": "scheduled"
+  },
+  {
+    "id": "2",
+    "patientId": "2",
+    "doctorId": "1",
+    "branchId": "1",
+    "date": "2024-01-15",
+    "time": "10:30",
+    "duration": 45,
+    "service": "Teeth Cleaning",
+    "status": "confirmed"
+  },
+  {
+    "id": "3",
+    "patientId": "3",
+    "doctorId": "2",
+    "branchId": "1",
+    "date": "2024-01-15",
+    "time": "14:00",
+    "duration": 90,
+    "service": "Root Canal",
+    "status": "completed"
+  },
+  {
+    "id": "4",
+    "patientId": "4",
+    "doctorId": "5",
+    "branchId": "2",
+    "date": "2024-01-16",
+    "time": "11:00",
+    "duration": 120,
+    "service": "Tooth Extraction",
+    "status": "scheduled"
+  },
+  {
+    "id": "5",
+    "patientId": "5",
+    "doctorId": "7",
+    "branchId": "3",
+    "date": "2024-01-16",
+    "time": "15:30",
+    "duration": 75,
+    "service": "Dental Implant Consultation",
+    "status": "confirmed"
+  },
+  {
+    "id": "6",
+    "patientId": "1",
+    "doctorId": "1",
+    "branchId": "1",
+    "date": "2024-01-17",
+    "time": "09:30",
+    "duration": 30,
+    "service": "Follow-up",
+    "status": "scheduled"
+  },
+  {
+    "id": "7",
+    "patientId": "3",
+    "doctorId": "2",
+    "branchId": "1",
+    "date": "2024-01-12",
+    "time": "13:00",
+    "duration": 45,
+    "service": "Dental Filling",
+    "status": "no-show"
+  },
+  {
+    "id": "8",
+    "patientId": "2",
+    "doctorId": "5",
+    "branchId": "2",
+    "date": "2024-01-13",
+    "time": "10:00",
+    "duration": 60,
+    "service": "Wisdom Tooth Removal",
+    "status": "cancelled"
+  }
+]

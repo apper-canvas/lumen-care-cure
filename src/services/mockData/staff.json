@@ -1,0 +1,74 @@
+[
+  {
+    "id": "1",
+    "name": "Dr. Amanda Smith",
+    "role": "Dentist",
+    "branchId": "1",
+    "specialization": "General Dentistry",
+    "email": "dr.smith@carecuredental.com",
+    "phone": "(555) 101-1001"
+  },
+  {
+    "id": "2",
+    "name": "Dr. Robert Lee",
+    "role": "Dentist",
+    "branchId": "1",
+    "specialization": "Orthodontics",
+    "email": "dr.lee@carecuredental.com",
+    "phone": "(555) 101-1002"
+  },
+  {
+    "id": "3",
+    "name": "Jennifer Martinez",
+    "role": "Hygienist",
+    "branchId": "1",
+    "specialization": "Preventive Care",
+    "email": "j.martinez@carecuredental.com",
+    "phone": "(555) 101-1003"
+  },
+  {
+    "id": "4",
+    "name": "Michelle Davis",
+    "role": "Receptionist",
+    "branchId": "1",
+    "specialization": "Patient Relations",
+    "email": "m.davis@carecuredental.com",
+    "phone": "(555) 101-1004"
+  },
+  {
+    "id": "5",
+    "name": "Dr. Kevin Wilson",
+    "role": "Dentist",
+    "branchId": "2",
+    "specialization": "Oral Surgery",
+    "email": "dr.wilson@carecuredental.com",
+    "phone": "(555) 102-2001"
+  },
+  {
+    "id": "6",
+    "name": "Rachel Brown",
+    "role": "Hygienist",
+    "branchId": "2",
+    "specialization": "Pediatric Care",
+    "email": "r.brown@carecuredental.com",
+    "phone": "(555) 102-2002"
+  },
+  {
+    "id": "7",
+    "name": "Dr. Patricia Garcia",
+    "role": "Dentist",
+    "branchId": "3",
+    "specialization": "Cosmetic Dentistry",
+    "email": "dr.garcia@carecuredental.com",
+    "phone": "(555) 103-3001"
+  },
+  {
+    "id": "8",
+    "name": "Tom Anderson",
+    "role": "Assistant",
+    "branchId": "3",
+    "specialization": "Clinical Support",
+    "email": "t.anderson@carecuredental.com",
+    "phone": "(555) 103-3002"
+  }
+]

@@ -1,0 +1,92 @@
+[
+  {
+    "id": "1",
+    "name": "Dental Syringes",
+    "category": "Dental Tools",
+    "quantity": 45,
+    "minStock": 20,
+    "branchId": "1",
+    "vendorId": "vendor1"
+  },
+  {
+    "id": "2",
+    "name": "Fluoride Gel",
+    "category": "Medications",
+    "quantity": 8,
+    "minStock": 10,
+    "branchId": "1",
+    "vendorId": "vendor2"
+  },
+  {
+    "id": "3",
+    "name": "Disposable Gloves",
+    "category": "Consumables",
+    "quantity": 150,
+    "minStock": 50,
+    "branchId": "1",
+    "vendorId": "vendor3"
+  },
+  {
+    "id": "4",
+    "name": "X-Ray Films",
+    "category": "Equipment",
+    "quantity": 25,
+    "minStock": 15,
+    "branchId": "1",
+    "vendorId": "vendor1"
+  },
+  {
+    "id": "5",
+    "name": "Dental Mirrors",
+    "category": "Dental Tools",
+    "quantity": 12,
+    "minStock": 8,
+    "branchId": "1",
+    "vendorId": "vendor4"
+  },
+  {
+    "id": "6",
+    "name": "Local Anesthetic",
+    "category": "Medications",
+    "quantity": 0,
+    "minStock": 5,
+    "branchId": "2",
+    "vendorId": "vendor2"
+  },
+  {
+    "id": "7",
+    "name": "Sterilization Pouches",
+    "category": "Consumables",
+    "quantity": 75,
+    "minStock": 30,
+    "branchId": "2",
+    "vendorId": "vendor3"
+  },
+  {
+    "id": "8",
+    "name": "Dental Burs",
+    "category": "Dental Tools",
+    "quantity": 35,
+    "minStock": 20,
+    "branchId": "2",
+    "vendorId": "vendor4"
+  },
+  {
+    "id": "9",
+    "name": "Office Paper",
+    "category": "Office Supplies",
+    "quantity": 20,
+    "minStock": 10,
+    "branchId": "3",
+    "vendorId": "vendor5"
+  },
+  {
+    "id": "10",
+    "name": "Dental Cement",
+    "category": "Medications",
+    "quantity": 6,
+    "minStock": 8,
+    "branchId": "3",
+    "vendorId": "vendor2"
+  }
+]
