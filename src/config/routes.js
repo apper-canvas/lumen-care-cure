@@ -4,6 +4,7 @@ import Patients from '@/components/pages/Patients';
 import Staff from '@/components/pages/Staff';
 import Inventory from '@/components/pages/Inventory';
 import Settings from '@/components/pages/Settings';
+import AddPatient from '@/pages/AddPatient';
 
 export const routes = {
   dashboard: {
@@ -41,12 +42,19 @@ export const routes = {
     icon: 'Package',
     component: Inventory
   },
-  settings: {
+settings: {
     id: 'settings',
     label: 'Settings',
     path: '/settings',
     icon: 'Settings',
     component: Settings
+  },
+  addPatient: {
+    id: 'addPatient',
+    label: 'Add Patient',
+    path: '/patients/add',
+    icon: 'UserPlus',
+    component: AddPatient
   }
 };
 
